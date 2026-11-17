@@ -1,30 +1,30 @@
-# Raporti i Laboratorit 01: Njohja me mjetet e punës dhe breadboard-i
+# Raporti i Laboratorit 01: Njohja me mjetet e punes dhe breadboard-i
 
-* **Lënda:** Elektronikë
+* **Lenda:** Elektronike
 * **Punuar nga:** Kejsi Seferi
 
 ---
 
-## 1. Qëllimi i Punës
-* Njohja praktike me instrumentet bazë të matjes në laboratorin e elektronikës (multimetri, gjeneratori i sinjalit dhe oshiloskopi).
-* Kuptimi i strukturës dhe përdorimit të pllakës së montimit pa saldim (**breadboard**) për ndërtimin e qarqeve elektrike.
+## 1. Qellimi i Punes
+* Njohja praktike me instrumentet baze te matjes ne laboratorin e elektronikes (multimetri, gjeneratori i sinjalit dhe oshiloskopi).
+* Kuptimi i struktures dhe perdorimit te pllakes se montimit pa saldim (breadboard) per ndertimin e qarqeve elektrike.
 
 ---
 
-## 2. Puna e Kryer në Breadboard
-Gjatë këtij sesioni laboratorik u realizuan hapat e mëposhtëm në pllakën e montimit (*breadboard*):
-* U analizua lidhja e brendshme e shinave të ushqimit (horizontale) dhe nyjeve të lidhjes së komponentëve (vertikale) në breadboard.
-* U montua një qark i thjeshtë provues duke vendosur një rezistencë në breadboard dhe duke lidhur ushqimin nga burimi DC.
-* U përdor multimetri për të matur vlerën e rezistencës dhe rënien e tensionit në skajet e saj direkt nga pikat e kontaktit në breadboard.
+## 2. Puna e Kryer ne Breadboard
+Gjate kij sesioni laboratorik u realizuan hapat e mëposhtëm ne pllaken e montimit (breadboard):
+* U analizuara lidhja e brendshme e shinave te ushqimit (horizontale) dhe nyjeve te lidhjes se komponenteve (vertikale) ne breadboard.
+* U montua nje qark i thjeshte provues duke vendosur nje rezistence ne breadboard dhe duke lidhur ushqimin nga burimi DC.
+* U perdor multimetri per te matur vleren e rezistences dhe renien e tensionit ne skajet e saj direkt nga pikat e kontaktit ne breadboard.
 
 ---
 
-## 3. Vëzhgimet dhe Matjet
-* **Matja e Tensionit:** Me ndihmën e multimetrit u mat tensioni i zbatuar në qarkun e montuar në breadboard.
-* **Lidhjet:** U verifikua rëndësia e kontaktit të mirë të pinave të komponentëve brenda vrimave të breadboard-it për të shmangur qarqet e hapura.
+## 3. Vezhgimet dhe Matjet
+* **Matja e Tensionit:** Me ndihmen e multimetrit u mat tensioni i zbatuar ne qarkun e montuar ne breadboard.
+* **Lidhjet:** U verifikua rendesia e kontaktit te mire te pinave te komponenteve brenda vrimave te breadboard-it per te shmangur qarqe te hapura.
 
 ---
 
 ## 4. Konkluzione
-* U përvetësua mënyra e përdorimit të breadboard-it për realizimin e shpejtë të lidhjeve pa pasur nevojë për saldim.
-* U kuptua rëndësia e vendosjes së saktë të nyjeve për të garantuar funksionimin e duhur të qarkut elektronik.
+* U përvetësua menyra e perdorimit te breadboard-it per realizimin e shpejte te lidhjeve pa pasur nevoje per saldim.
+* U kuptua rendesia e vendosjes se sakte te nyjeve per te garantuar funksionimin e duhur te qarkut elektronik.
