@@ -1,0 +1,30 @@
+# Raporti i Laboratorit 01: Njohja me mjetet e punës dhe breadboard-i
+
+* **Lënda:** Elektronikë
+* **Punuar nga:** Kejsi Seferi
+
+---
+
+## 1. Qëllimi i Punës
+* Njohja praktike me instrumentet bazë të matjes në laboratorin e elektronikës (multimetri, gjeneratori i sinjalit dhe oshiloskopi).
+* Kuptimi i strukturës dhe përdorimit të pllakës së montimit pa saldim (**breadboard**) për ndërtimin e qarqeve elektrike.
+
+---
+
+## 2. Puna e Kryer në Breadboard
+Gjatë këtij sesioni laboratorik u realizuan hapat e mëposhtëm në pllakën e montimit (*breadboard*):
+* U analizua lidhja e brendshme e shinave të ushqimit (horizontale) dhe nyjeve të lidhjes së komponentëve (vertikale) në breadboard.
+* U montua një qark i thjeshtë provues duke vendosur një rezistencë në breadboard dhe duke lidhur ushqimin nga burimi DC.
+* U përdor multimetri për të matur vlerën e rezistencës dhe rënien e tensionit në skajet e saj direkt nga pikat e kontaktit në breadboard.
+
+---
+
+## 3. Vëzhgimet dhe Matjet
+* **Matja e Tensionit:** Me ndihmën e multimetrit u mat tensioni i zbatuar në qarkun e montuar në breadboard.
+* **Lidhjet:** U verifikua rëndësia e kontaktit të mirë të pinave të komponentëve brenda vrimave të breadboard-it për të shmangur qarqet e hapura.
+
+---
+
+## 4. Konkluzione
+* U përvetësua mënyra e përdorimit të breadboard-it për realizimin e shpejtë të lidhjeve pa pasur nevojë për saldim.
+* U kuptua rëndësia e vendosjes së saktë të nyjeve për të garantuar funksionimin e duhur të qarkut elektronik.
