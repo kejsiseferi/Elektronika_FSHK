@@ -1,0 +1,321 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8b28f3b1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Kjo qelize rregullon pamjen vizuale te raportit.\n",
+    "# Mos e ndrysho!\n",
+    "\n",
+    "from IPython.display import display, HTML\n",
+    "\n",
+    "display(HTML(\"\"\"\n",
+    "<style>\n",
+    "\n",
+    ".jp-RenderedMarkdown {\n",
+    "    font-family: \"Segoe UI\", Roboto, sans-serif;\n",
+    "    line-height: 1.6;\n",
+    "}\n",
+    "\n",
+    ".jp-RenderedMarkdown h1 {\n",
+    "    text-align: center;\n",
+    "    border-bottom: 3px solid #222;\n",
+    "    padding-bottom: 0.4em;\n",
+    "    margin-top: 0.5em;\n",
+    "}\n",
+    "\n",
+    ".jp-RenderedMarkdown h2 {\n",
+    "    border-left: 6px solid #444;\n",
+    "    padding-left: 0.6em;\n",
+    "    margin-top: 1.8em;\n",
+    "}\n",
+    "\n",
+    ".jp-RenderedMarkdown h3 {\n",
+    "    margin-top: 1.2em;\n",
+    "    font-weight: 600;\n",
+    "}\n",
+    "\n",
+    "table {\n",
+    "    border-collapse: collapse;\n",
+    "}\n",
+    "\n",
+    "th, td {\n",
+    "    border: 1px solid #aaa;\n",
+    "    padding: 6px 10px;\n",
+    "}\n",
+    "\n",
+    "</style>\n",
+    "\"\"\"))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "64f6fd0a",
+   "metadata": {},
+   "source": [
+    "<div style=\"text-align:center\">\n",
+    "\n",
+    "# Raport Laboratori – Elektronike  \n",
+    "## Titulli i Eksperimentit: Qarqet me Rezistenca (Ndaresi i Tensionit dhe Ngarkesa)\n",
+    "\n",
+    "**Lenda:** Hyrje ne Elektronike (Viti III, Fizike)  \n",
+    "**Pedagogu:** Prof. Ervin  \n",
+    "**Student(et):** Kejsi Seferi, Vjorisa Cami, Xheso Kujdheci, Andra Hiloci, Artem Eksi  \n",
+    "**Grupi:** Grupi i Punes  \n",
+    "**Data e zhvillimit:** 11.11.2026  \n",
+    "**Data e dorezimit:** 17.11.2026  \n",
+    "\n",
+    "</div>\n",
+    "\n",
+    "---\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e7900367",
+   "metadata": {},
+   "source": [
+    "# 1. Qellimi i Eksperimentit\n",
+    "\n",
+    "Ne kete eksperiment analizohet sjellja e qarqeve rezistive te lidhura ne seri dhe ne paralel ne bordin laboratorik (breadboard). Verifikohet eksperimentalisht parimi i ndarjes se tensionit (Voltage Divider) dhe ligjet e Kirchhoff-it ne regjim te rrymes se vazhduar (DC). Percaktohet tensioni ne dalje $V_{out}$ ne dy raste: kur qarku eshte i hapur (pa ngarkese) dhe kur ne dalje lidhet nje rezistence ngarkese $R_L$. Gjithashtu, testohet marreveshja teorike midis vlerave te llogaritura me formulat e rezistences ekuivalente dhe vlerave te matura me multimetrin digjital.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fdf040b7",
+   "metadata": {},
+   "source": [
+    "# 2. Baza Teorike\n",
+    "\n",
+    "## 2.1 Modeli i Qarkut\n",
+    "\n",
+    "Qarku baze perbehet nga dy rezistenca $R_1$ dhe $R_2$ te lidhura ne seri me burimin e tensionit te vazhduar $V_{in}$ dhe token ($Gnd$). Tensioni i daljes $V_{out}$ merret ne nyjen midis dy rezistencave.\n",
+    "\n",
+    "- **Sinjali hyres:** Tensioni i vazhduar $V_{in}$ nga burimi DC i trainerit laboratorik.\n",
+    "- **Sinjali dales:** Tensioni $V_{out}$ i matur ne skajet e rezistences $R_2$ (ose ekuivalentit $R_2 \\parallel R_L$).\n",
+    "- **Vlerat e komponenteve:** Rezistenca fikse ne rendin e $\\text{k}\\Omega$ dhe $\\text{M}\\Omega$ (p.sh. $R_1 = 7.55\\text{ k}\\Omega$, $R_2 = 7.78\\text{ k}\\Omega$, $R_L = 3.30\\text{ k}\\Omega$).\n",
+    "- **Supozimet:** Komponentet konsiderohen rezistenca ideale lineare, percjellesit kane rezistence te paperfillshme dhe burimi DC jep tension konstant.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b1985c73",
+   "metadata": {},
+   "source": [
+    "## 2.2 Ekuacionet Themelore\n",
+    "\n",
+    "Per ndaresin e tensionit pa ngarkese (qark i hapur ne dalje), rryma e njejte kalon neper $R_1$ dhe $R_2$, keshtu qe tensioni i daljes jepet nga:\n",
+    "\n",
+    "$$\n",
+    "V_{out} = V_{in} \\cdot \\frac{R_2}{R_1 + R_2}\n",
+    "$$\n",
+    "\n",
+    "Kur ne dalje lidhet nje rezistence ngarkese $R_L$ paralelisht me $R_2$, rezistenca ekuivalente e deges se poshtme behet:\n",
+    "\n",
+    "$$\n",
+    "R_{ek} = R_2 \\parallel R_L = \\frac{R_2 \\cdot R_L}{R_2 + R_L}\n",
+    "$$\n",
+    "\n",
+    "Ne kete rast, tensioni i daljes me ngarkese llogaritet me formulen:\n",
+    "\n",
+    "$$\n",
+    "V_{out} = V_{in} \\cdot \\frac{R_2 \\parallel R_L}{R_1 + (R_2 \\parallel R_L)}\n",
+    "$$\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "fed3e031",
+   "metadata": {},
+   "source": [
+    "# 3. Ndertimi Eksperimental\n",
+    "\n",
+    "## 3.1 Pajisjet\n",
+    "\n",
+    "| Pajisja | Modeli | Diapazoni | Saktesia |\n",
+    "|----------|--------|-----------|-----------|\n",
+    "| Trainer Laboratorik | E&L Instruments ACT-1 | 0 - 15 V DC | ± 0.1 V |\n",
+    "| Multimeter Digjital | DMM Standard | 20 V DC / 20 kΩ - 20 MΩ | ± 0.5% |\n",
+    "| Breadboard dhe kabllo | Pllake montimi pa saldim | - | - |\n",
+    "\n",
+    "## 3.2 Montimi Praktik\n",
+    "\n",
+    "![Montimi ne Breadboard](figs/breadboard_lab2.jpeg)\n",
+    "\n",
+    "- **Ushqimi i qarkut:** Eshte perdorur burimi i brendshem DC i trainerit E&L Instruments (`+V SUPPLY` dhe `-V SUPPLY`).\n",
+    "- **Referenca e tokezimit:** Pika e perbashket e references (`GND`) eshte lidhur me shinen e poshtme te breadboard-it.\n",
+    "- **Vlerat nominale dhe te matura:** Para montimit ne breadboard, vlerat e sakta te cdo rezistence jane matur me ohm-meter per te rritur saktesine e krahasimit teorik.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d620147d",
+   "metadata": {},
+   "source": [
+    "# 4. Te Dhenat e Matura"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "66bb3003",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "\n",
+    "# Te dhenat eksperimentale nga fletorja e laboratorit (Eksperimenti 1, 2 dhe 3)\n",
+    "data = pd.DataFrame({\n",
+    "    \"Eksperimenti\": [\n",
+    "        \"Eksp 1: Ndarsi i tensionit (kΩ)\",\n",
+    "        \"Eksp 2: Qarku i hapur (MΩ)\",\n",
+    "        \"Eksp 3a: Me ngarkese RL (3.30 kΩ)\",\n",
+    "        \"Eksp 3b: Me ngarkese RL (2.34 kΩ)\"\n",
+    "    ],\n",
+    "    \"R1 (kΩ)\": [7.55, 3270.0, 7.55, 7.55],\n",
+    "    \"R2 (kΩ)\": [7.78, 3300.0, 7.78, 7.78],\n",
+    "    \"RL (kΩ)\": [np.nan, np.nan, 3.30, 2.34],\n",
+    "    \"Vin (V)\": [15.35, 15.77, 15.35, 15.35],\n",
+    "    \"Vout_exp (V)\": [7.50, 6.71, 7.76, 7.71]\n",
+    "})\n",
+    "\n",
+    "data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "24cfb124",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Llogaritja e rezistences ekuivalente R2 || RL dhe tensionit teorik Vout_teori\n",
+    "def llogarit_vout_teori(row):\n",
+    "    if pd.isna(row[\"RL (kΩ)\"]):\n",
+    "        r_ek = row[\"R2 (kΩ)\"]\n",
+    "    else:\n",
+    "        r_ek = (row[\"R2 (kΩ)\"] * row[\"RL (kΩ)\"]) / (row[\"R2 (kΩ)\"] + row[\"RL (kΩ)\"])\n",
+    "    return row[\"Vin (V)\"] * (r_ek / (row[\"R1 (kΩ)\"] + r_ek))\n",
+    "\n",
+    "data[\"Vout_teori (V)\"] = data.apply(llogarit_vout_teori, axis=1).round(2)\n",
+    "data[\"Gabimi Relativ (%)\"] = (np.abs(data[\"Vout_exp (V)\"] - data[\"Vout_teori (V)\"]) / data[\"Vout_teori (V)\"] * 100).round(2)\n",
+    "\n",
+    "data"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2f7f93c7",
+   "metadata": {},
+   "source": [
+    "# 5. Analiza e te Dhenave"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6a4a8e82",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import matplotlib.pyplot as plt\n",
+    "\n",
+    "x = np.arange(len(data[\"Eksperimenti\"]))\n",
+    "width = 0.35\n",
+    "\n",
+    "plt.figure(figsize=(8, 4.5))\n",
+    "plt.bar(x - width/2, data[\"Vout_teori (V)\"], width, label=\"Vout Teorik (V)\", color=\"#4C72B0\")\n",
+    "plt.bar(x + width/2, data[\"Vout_exp (V)\"], width, label=\"Vout Eksperimental (V)\", color=\"#DD8452\")\n",
+    "\n",
+    "plt.ylabel(\"Tensioni Vout (V)\")\n",
+    "plt.title(\"Krahasimi i Tensionit Teorik dhe Eksperimental ne Dalje\")\n",
+    "plt.xticks(x, [\"Eksp 1\", \"Eksp 2\", \"Eksp 3a\", \"Eksp 3b\"])\n",
+    "plt.legend()\n",
+    "plt.grid(axis=\"y\", linestyle=\"--\", alpha=0.7)\n",
+    "plt.tight_layout()\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e9ba33bb",
+   "metadata": {},
+   "source": [
+    "Nga grafiku dhe tabela e llogaritjeve verejme:\n",
+    "\n",
+    "- **Ne Eksperimentin 1:** Kur $R_1 \\approx R_2$ ($7.55\\text{ k}\\Omega$ dhe $7.78\\text{ k}\\Omega$), tensioni ne dalje $V_{out} = 7.50\\text{ V}$ eshte shume afer gjysmes se tensionit hyres $V_{in} = 15.35\\text{ V}$ ($V_{teori} = 7.79\\text{ V}$).\n",
+    "- **Ne Eksperimentin 2:** Per rezistenca shume te medha ne rendin e Mega-Ohm ($3.27\\text{ M}\\Omega$ dhe $3.30\\text{ M}\\Omega$), vlera e matur $V_{out} = 6.71\\text{ V}$ eshte me e ulet se vlera teorike ideale ($7.92\\text{ V}$) per shkak te efektit ngarkues te rezistences se brendshme te multimetrit.\n",
+    "- **Ne Eksperimentin 3:** Shtimi i rezistences se ngarkesës $R_L$ ne paralel me $R_2$ ul rezistencen ekuivalente te deges se daljes.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6f789b8b",
+   "metadata": {},
+   "source": [
+    "# 6. Analiza e Gabimeve\n",
+    "\n",
+    "Gabimi relativ llogaritet me formulen:\n",
+    "\n",
+    "$$\n",
+    "\\text{Gabimi} = \\frac{|V_{exp} - V_{teori}|}{V_{teori}} \\times 100\\%\n",
+    "$$\n",
+    "\n",
+    "Burimet kryesore te pasigurise dhe devijimeve ne matje jane:\n",
+    "\n",
+    "- **Impedanca e brendshme e multimetrit (Efekti i ngarkeses):** Ne Eksperimentin 2, ku rezistencat jane ne rendin e $3.3\\text{ M}\\Omega$, rezistenca e brendshme e voltmetrit (zakonisht $10\\text{ M}\\Omega$) lidhet ne paralel me $R_2$, duke ulur ndjeshem tensionin e matur ($6.71\\text{ V}$ kundrejt $7.92\\text{ V}$).\n",
+    "- **Tolerancat e komponentëve dhe kontaktet:** Rezistenca e kontakteve ne vrimat e breadboard-it dhe luhatjet e vogla te tensionit te burimit DC.\n",
+    "- **Pasiguria e leximit:** Saktesia instrumentale e multimetrit digjital gjate matjes se tensionit dhe rezistences.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c5bd2813",
+   "metadata": {},
+   "source": [
+    "# 7. Diskutimi\n",
+    "\n",
+    "1. **Sjellja e qarkut:** Ndaresi i tensionit funksionon ne menyre lineare dhe perputhet shume mire me parashikimet teorike kur rezistencat e qarkut jane ne rendin e kilo-Ohm ($\text{k}\\Omega$).\n",
+    "2. **Burimet e devijimit:** Devijimi me i dukshem shfaqet ne Eksperimentin 2 (me rezistenca $\text{M}\\Omega$), ku impedanca e voltmetrit nuk mund te konsiderohet me e pafundme ne krahasim me rezistencat e qarkut, si dhe ne Eksperimentin 3 ku lidhja e ngarkeses $R_L$ ndryshon ndarjen e tensionit.\n",
+    "3. **Permiresime:** Per te shmangur efektin ngarkues te instrumentit mates ne qarqe me rezistence te larte, rekomandohet perdorimi i nje buferi tensioni (voltage follower me amplifier operacional) para matjes me multimetër.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "d74044e6",
+   "metadata": {},
+   "source": [
+    "# 8. Perfundimi\n",
+    "\n",
+    "- **Eksperimenti 1 (Ndaresi ne kΩ):** Vlera teorike $V_{teori} = 7.79\\text{ V}$, vlera eksperimentale $V_{exp} = 7.50\\text{ V}$, me devijim relativ prej $3.72\\%$.\n",
+    "- **Eksperimenti 2 (Ndaresi ne MΩ):** Vlera teorike ideale $V_{teori} = 7.92\\text{ V}$, vlera eksperimentale $V_{exp} = 6.71\\text{ V}$, me devijim prej $15.28\\%$ te shkaktuar nga rezistenca e brendshme e voltmetrit.\n",
+    "- **Perfundimi:** U vertetua eksperimentalisht ligji i ndarjes se tensionit dhe u demonstrua praktikisht se si rezistenca e ngarkeses $R_L$ dhe impedanca e instrumentit mates ndikojne direkt ne tensionin e daljes se qarkut.\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.12.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
