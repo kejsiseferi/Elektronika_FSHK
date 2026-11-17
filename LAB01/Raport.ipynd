@@ -1,4 +1,4 @@
-# Raporti i Laboratorit 01: Njohja me mjetet e punes dhe breadboard-i
+# Raporti i Laboratorit 01: Njohja me Markdown dhe Breadboard
 
 * **Lenda:** Elektronike
 * **Punuar nga:** Kejsi Seferi
@@ -6,25 +6,27 @@
 ---
 
 ## 1. Qellimi i Punes
-* Njohja praktike me instrumentet baze te matjes ne laboratorin e elektronikes (multimetri, gjeneratori i sinjalit dhe oshiloskopi).
-* Kuptimi i struktures dhe perdorimit te pllakes se montimit pa saldim (breadboard) per ndertimin e qarqeve elektrike.
+* Njohja me gjuhen e formatimit **Markdown** per shkrimin dhe strukturimin e raporteve laboratorike ne Jupyter Notebook.
+* Kuptimi i struktures dhe menyres se funksionimit te pllakes se montimit pa saldim (**breadboard**) per lidhjen e qarqeve elektrike.
 
 ---
 
-## 2. Puna e Kryer ne Breadboard
-Gjate kij sesioni laboratorik u realizuan hapat e mëposhtëm ne pllaken e montimit (breadboard):
-* U analizuara lidhja e brendshme e shinave te ushqimit (horizontale) dhe nyjeve te lidhjes se komponenteve (vertikale) ne breadboard.
-* U montua nje qark i thjeshte provues duke vendosur nje rezistence ne breadboard dhe duke lidhur ushqimin nga burimi DC.
-* U perdor multimetri per te matur vleren e rezistences dhe renien e tensionit ne skajet e saj direkt nga pikat e kontaktit ne breadboard.
+## 2. Puna me Markdown
+Gjate ketij laboratori u praktikuan elementet baze te sintakses Markdown per organizimin e dokumentacionit:
+* Perdorimi i titujve dhe nentitujve (`#`, `##`, `###`).
+* Krijimi i listave me pika (`*` ose `-`) dhe listave te numeruara (`1.`, `2.`).
+* Theksimi i tekstit me **bold** dhe *italic*, si dhe perdorimi i vijave ndarese (`---`).
 
 ---
 
-## 3. Vezhgimet dhe Matjet
-* **Matja e Tensionit:** Me ndihmen e multimetrit u mat tensioni i zbatuar ne qarkun e montuar ne breadboard.
-* **Lidhjet:** U verifikua rendesia e kontaktit te mire te pinave te komponenteve brenda vrimave te breadboard-it per te shmangur qarqe te hapura.
+## 3. Puna me Breadboard
+U shpjegua dhe u kuptua ndertimi i brendshem i breadboard-it:
+* **Shinat e ushqimit (Power rails):** Lidhen horizontalisht pergjate aneve te pllakes dhe perdoren per te shperndare ushqimin (+ dhe -) ne te gjithe qarkun.
+* **Shtyllat e komponenteve (Terminal strips):** Grupe me nga 5 vrima te lidhura vertikalisht me njera-tjetren, te ndara ne mes nga nje kanal qendror.
+* U praktikua vendosja e sakte e komponenteve ne nyje te ndryshme per te shmangur lidhjet e shkurtra.
 
 ---
 
 ## 4. Konkluzione
-* U përvetësua menyra e perdorimit te breadboard-it per realizimin e shpejte te lidhjeve pa pasur nevoje per saldim.
-* U kuptua rendesia e vendosjes se sakte te nyjeve per te garantuar funksionimin e duhur te qarkut elektronik.
+* U pervetesua perdorimi i Markdown-it per te krijuar raporte te qarta dhe te strukturuara mire.
+* U kuptua logjika e lidhjeve te brendshme te breadboard-it si mjeti baze per montimin e shpejte te qarqeve elektronike pa saldim.
